@@ -7,7 +7,7 @@ main {
 }
 
 .left {
-  background-image:linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.8)), url("/assets/images/fish-sushi.jpg");
+  background-image:linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.8)), url("./assets/images/fish-sushi.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   width: 50%;
@@ -32,7 +32,7 @@ main {
 }
 
 .right {
-  background-image:linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.8)), url("/assets/images/japan.jpg");
+  background-image:linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.8)), url("./assets/images/japan.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
