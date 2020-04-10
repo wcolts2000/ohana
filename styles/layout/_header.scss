@@ -1,0 +1,31 @@
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  background: $color-black;
+  padding: 2rem;
+  padding-left: 3rem;
+  @include respond("tab-port") {
+    justify-content: center;
+
+    a {
+      margin-bottom: 1rem;
+    }
+  }
+
+  a, ul li a {
+    color: $color-white;
+    text-decoration: none;
+    font-size: 3.8rem;
+  }
+
+  ul {
+    display: flex;
+    width: 40%;
+    margin-left: auto;
+    justify-content: space-around;
+
+    @include respond('tab-port') {
+      width: 100%;
+    }
+  }
+}

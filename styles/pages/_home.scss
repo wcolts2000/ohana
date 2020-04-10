@@ -1,0 +1,72 @@
+main {
+  display: flex;
+  min-height: 80vh;
+  text-align: center;
+  color: white;
+  justify-content: center;
+}
+
+.left {
+  background-image:linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.8)), url(/assets/images/fish-sushi.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 50%;
+
+  svg {
+    margin: 6rem auto 3rem;
+  };
+
+  h2 {
+    font-size: 4rem;
+  }
+
+  a, address {
+    font-size: 3.5rem;
+    padding: 1rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.right {
+  background-image:linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.8)), url(/assets/images/japan.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  width: 50%;
+
+  h1 {
+    font-size: 6rem;
+    margin-top: 6rem;
+  }
+
+  .box {
+    margin: 4rem 15% 8rem;
+    padding: 2rem;
+    outline: 2rem solid rgba($color-primary, .5);
+    background: rgba(0,0,0,.7);
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 3.5rem;
+    padding: 2rem;
+  }
+
+  button {
+    padding: .5rem 10rem;
+    font-size: 5rem;
+    background: $color-secondary;
+    color: $color-black;
+    font-family: 'Julee', cursive;
+    letter-spacing: 2px;
+    border-radius: 5rem;
+    cursor: pointer;
+  }
+}

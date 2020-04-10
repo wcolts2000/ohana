@@ -1,0 +1,23 @@
+{
+  "name": "ohana",
+  "version": "1.0.0",
+  "description": "ohana sushi site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wcolts2000/ohana.git"
+  },
+  "keywords": [
+    "reno",
+    "sushi"
+  ],
+  "author": "sean pheneger",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wcolts2000/ohana/issues"
+  },
+  "homepage": "https://github.com/wcolts2000/ohana#readme"
+}
