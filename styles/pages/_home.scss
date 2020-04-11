@@ -7,7 +7,7 @@ main.landing-page {
   justify-content: center;
 
   @include respond("tab-port") {
-    background-image: url(/fish-sushi.JPG);
+    background-image:linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.8)), url("assets/images/fish-sushi.JPG");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right;
@@ -15,7 +15,7 @@ main.landing-page {
 
 
 .left {
-  background-image:linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.8)), url("/fish-sushi.JPG");
+  background-image:linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.8)), url("assets/images/fish-sushi.JPG");
   background-size: cover;
   background-repeat: no-repeat;
   width: 50%;
@@ -56,7 +56,7 @@ main.landing-page {
 }
 
 .right {
-  background-image:linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.8)), url("/japan.JPG");
+  background-image:linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.8)), url("assets/images/japan.JPG");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
