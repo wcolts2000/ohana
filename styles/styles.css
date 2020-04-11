@@ -368,5 +368,7 @@ main.landing-page .right button:hover {
 }
 
 .menu-main section {
-  color: #fff;
+  color: #000;
+  background: rgba(255, 255, 255, 0.7);
+  margin: 4%;
 }
