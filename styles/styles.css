@@ -304,24 +304,24 @@ main.landing-page .right .box {
 }
 
 main.landing-page .right h2 {
-  font-size: 3rem;
+  font-size: 2.8rem;
+  letter-spacing: 2px;
 }
 
 @media (max-width: 56.25em) {
   main.landing-page .right h2 {
-    letter-spacing: 2px;
     font-size: 3.2rem;
   }
 }
 
 main.landing-page .right h3 {
-  font-size: 3.5rem;
+  letter-spacing: 2.5px;
+  font-size: 2.5rem;
   padding: 2rem;
 }
 
 @media (max-width: 56.25em) {
   main.landing-page .right h3 {
-    letter-spacing: 2.5px;
     font-size: 3.8rem;
   }
 }
