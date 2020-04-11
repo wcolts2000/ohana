@@ -114,12 +114,24 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   min-height: 80vh;
   text-align: center;
   color: white;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media (max-width: 56.25em) {
+  main {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.8))), url(/assets/images/fish-sushi.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(/assets/images/fish-sushi.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+  }
 }
 
 .left {
@@ -130,8 +142,26 @@ main {
   width: 50%;
 }
 
+@media (max-width: 56.25em) {
+  .left {
+    width: 100%;
+    background-image: none;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+  }
+}
+
 .left svg {
   margin: 6rem auto 3rem;
+}
+
+@media (max-width: 56.25em) {
+  .left svg {
+    width: 30%;
+    height: 30%;
+    margin: 2rem auto;
+  }
 }
 
 .left h2 {
@@ -141,6 +171,12 @@ main {
 .left a, .left address {
   font-size: 3.5rem;
   padding: 1rem;
+}
+
+@media (max-width: 56.25em) {
+  .left a, .left address {
+    display: none;
+  }
 }
 
 .left a {
@@ -157,9 +193,24 @@ main {
   width: 50%;
 }
 
+@media (max-width: 56.25em) {
+  .right {
+    width: 100%;
+    background-image: none;
+  }
+}
+
 .right h1 {
   font-size: 6rem;
   margin-top: 6rem;
+}
+
+@media (max-width: 56.25em) {
+  .right h1 {
+    color: transparent;
+    position: absolute;
+    pointer-events: none;
+  }
 }
 
 .right .box {

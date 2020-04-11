@@ -1,9 +1,17 @@
 main {
   display: flex;
+  flex-wrap: wrap;
   min-height: 80vh;
   text-align: center;
   color: white;
   justify-content: center;
+
+  @include respond("tab-port") {
+    background-image:linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.8)), url(/assets/images/fish-sushi.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+  }
 }
 
 .left {
@@ -12,8 +20,20 @@ main {
   background-repeat: no-repeat;
   width: 50%;
 
+  @include respond("tab-port") {
+    width: 100%;
+    background-image: none;
+    height: min-content;
+  }
+
   svg {
     margin: 6rem auto 3rem;
+
+    @include respond("tab-port") {
+      width: 30%;
+      height: 30%;
+      margin: 2rem auto;
+    }
   };
 
   h2 {
@@ -23,6 +43,10 @@ main {
   a, address {
     font-size: 3.5rem;
     padding: 1rem;
+
+    @include respond("tab-port") {
+      display: none;
+    }
   }
 
   a {
@@ -38,9 +62,20 @@ main {
   background-position: right;
   width: 50%;
 
+  @include respond("tab-port") {
+    width: 100%;
+    background-image: none;
+  }
+
   h1 {
     font-size: 6rem;
     margin-top: 6rem;
+
+    @include respond("tab-port") {
+      color: transparent;
+      position: absolute;
+      pointer-events: none;
+    }
   }
 
   .box {

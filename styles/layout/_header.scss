@@ -4,6 +4,7 @@ nav {
   background: $color-black;
   padding: 2rem;
   padding-left: 3rem;
+  
   @include respond("tab-port") {
     justify-content: center;
 
