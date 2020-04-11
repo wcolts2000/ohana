@@ -41,7 +41,18 @@ html {
   }
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'Julee', cursive;
@@ -52,6 +63,12 @@ body {
   body {
     padding: 0;
   }
+}
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 
 nav.main-nav {
@@ -85,6 +102,12 @@ nav.main-nav a, nav.main-nav ul li a {
   color: #fff;
   text-decoration: none;
   font-size: 3.8rem;
+  -webkit-transition: all .5;
+  transition: all .5;
+}
+
+nav.main-nav a:hover, nav.main-nav ul li a:hover {
+  color: #FFC806;
 }
 
 nav.main-nav .active {
@@ -118,6 +141,8 @@ nav.main-nav ul {
 }
 
 footer {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   background: #930E0C;
   color: #fff;
   font-size: 3rem;
@@ -164,12 +189,14 @@ footer h3 {
 }
 
 main.landing-page {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  min-height: 80vh;
   text-align: center;
   color: white;
   -webkit-box-pack: center;
@@ -267,8 +294,11 @@ main.landing-page .right h1 {
 }
 
 main.landing-page .right .box {
-  margin: 4rem 15% 8rem;
-  padding: 2rem;
+  margin: 4rem auto 8rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 2rem 4rem;
   outline: 2rem solid rgba(147, 14, 12, 0.5);
   background: rgba(0, 0, 0, 0.7);
 }
@@ -277,9 +307,23 @@ main.landing-page .right h2 {
   font-size: 3rem;
 }
 
+@media (max-width: 56.25em) {
+  main.landing-page .right h2 {
+    letter-spacing: 2px;
+    font-size: 3.2rem;
+  }
+}
+
 main.landing-page .right h3 {
   font-size: 3.5rem;
   padding: 2rem;
+}
+
+@media (max-width: 56.25em) {
+  main.landing-page .right h3 {
+    letter-spacing: 2.5px;
+    font-size: 3.8rem;
+  }
 }
 
 main.landing-page .right button {
@@ -293,7 +337,20 @@ main.landing-page .right button {
   cursor: pointer;
 }
 
+main.landing-page .right button:hover {
+  background: #ecb700;
+}
+
+@media (max-width: 56.25em) {
+  main.landing-page .right button {
+    margin-bottom: 5rem;
+  }
+}
+
 .menu-main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
   position: relative;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.7))), url("../assets/images/sushi.JPG");
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("../assets/images/sushi.JPG");

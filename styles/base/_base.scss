@@ -22,7 +22,13 @@ html {
   }
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
   font-family: 'Julee', cursive;
   font-size: $default-font-size;
@@ -30,4 +36,8 @@ body {
   @include respond(tab-port) {
     padding: 0;
   }
+}
+
+main {
+  flex: 1 0 auto;
 }
