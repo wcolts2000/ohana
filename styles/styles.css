@@ -179,8 +179,8 @@ main.landing-page {
 
 @media (max-width: 56.25em) {
   main.landing-page {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.8))), url("/assets/images/fish-sushi.JPG");
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/assets/images/fish-sushi.JPG");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.8))), url("/fish-sushi.JPG");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/fish-sushi.JPG");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right;
@@ -188,8 +188,8 @@ main.landing-page {
 }
 
 main.landing-page .left {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.8))), url("/assets/images/fish-sushi.JPG");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/assets/images/fish-sushi.JPG");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.8))), url("/fish-sushi.JPG");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/fish-sushi.JPG");
   background-size: cover;
   background-repeat: no-repeat;
   width: 50%;
@@ -238,8 +238,8 @@ main.landing-page .left a {
 }
 
 main.landing-page .right {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.8))), url("/assets/images/japan.JPG");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/assets/images/japan.JPG");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.8))), url("/japan.JPG");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/japan.JPG");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
@@ -295,8 +295,8 @@ main.landing-page .right button {
 
 .menu-main {
   position: relative;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.7))), url("/assets/images/sushi.JPG");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("/assets/images/sushi.JPG");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.7))), url("/sushi.JPG");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("/sushi.JPG");
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
