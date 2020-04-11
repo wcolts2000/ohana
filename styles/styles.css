@@ -54,7 +54,7 @@ body {
   }
 }
 
-nav {
+nav.main-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -63,26 +63,35 @@ nav {
   background: #000;
   padding: 2rem;
   padding-left: 3rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
 }
 
 @media (max-width: 56.25em) {
-  nav {
+  nav.main-nav {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
-  nav a {
+  nav.main-nav a {
     margin-bottom: 1rem;
   }
 }
 
-nav a, nav ul li a {
+nav.main-nav a, nav.main-nav ul li a {
   color: #fff;
   text-decoration: none;
   font-size: 3.8rem;
 }
 
-nav ul {
+nav.main-nav .active {
+  color: #FFC806;
+}
+
+nav.main-nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -93,8 +102,18 @@ nav ul {
 }
 
 @media (max-width: 56.25em) {
-  nav ul {
+  nav.main-nav ul {
     width: 100%;
+  }
+}
+
+.spacer {
+  height: 75px;
+}
+
+@media (max-width: 56.25em) {
+  .spacer {
+    height: 112px;
   }
 }
 
@@ -110,7 +129,41 @@ footer h3 {
   margin-bottom: 1rem;
 }
 
-main {
+.menu-nav {
+  background: #fff;
+  padding: 2rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 75px;
+}
+
+.menu-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 4rem;
+}
+
+.menu-nav ul li:not(:last-child) {
+  padding-right: 4rem;
+}
+
+.menu-nav ul a {
+  color: #000;
+  text-decoration: none;
+}
+
+.menu-nav h1 {
+  display: none;
+}
+
+main.landing-page {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -125,7 +178,7 @@ main {
 }
 
 @media (max-width: 56.25em) {
-  main {
+  main.landing-page {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.8))), url(/assets/images/fish-sushi.jpg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(/assets/images/fish-sushi.jpg);
     background-size: cover;
@@ -134,7 +187,7 @@ main {
   }
 }
 
-.left {
+main.landing-page .left {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.8))), url(/assets/images/fish-sushi.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(/assets/images/fish-sushi.jpg);
   background-size: cover;
@@ -143,7 +196,7 @@ main {
 }
 
 @media (max-width: 56.25em) {
-  .left {
+  main.landing-page .left {
     width: 100%;
     background-image: none;
     height: -webkit-min-content;
@@ -152,39 +205,39 @@ main {
   }
 }
 
-.left svg {
+main.landing-page .left svg {
   margin: 6rem auto 3rem;
 }
 
 @media (max-width: 56.25em) {
-  .left svg {
+  main.landing-page .left svg {
     width: 30%;
     height: 30%;
     margin: 2rem auto;
   }
 }
 
-.left h2 {
+main.landing-page .left h2 {
   font-size: 4rem;
 }
 
-.left a, .left address {
+main.landing-page .left a, main.landing-page .left address {
   font-size: 3.5rem;
   padding: 1rem;
 }
 
 @media (max-width: 56.25em) {
-  .left a, .left address {
+  main.landing-page .left a, main.landing-page .left address {
     display: none;
   }
 }
 
-.left a {
+main.landing-page .left a {
   text-decoration: none;
   color: white;
 }
 
-.right {
+main.landing-page .right {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.8))), url(/assets/images/japan.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(/assets/images/japan.jpg);
   background-size: cover;
@@ -194,42 +247,42 @@ main {
 }
 
 @media (max-width: 56.25em) {
-  .right {
+  main.landing-page .right {
     width: 100%;
     background-image: none;
   }
 }
 
-.right h1 {
+main.landing-page .right h1 {
   font-size: 6rem;
   margin-top: 6rem;
 }
 
 @media (max-width: 56.25em) {
-  .right h1 {
+  main.landing-page .right h1 {
     color: transparent;
     position: absolute;
     pointer-events: none;
   }
 }
 
-.right .box {
+main.landing-page .right .box {
   margin: 4rem 15% 8rem;
   padding: 2rem;
   outline: 2rem solid rgba(147, 14, 12, 0.5);
   background: rgba(0, 0, 0, 0.7);
 }
 
-.right h2 {
+main.landing-page .right h2 {
   font-size: 3rem;
 }
 
-.right h3 {
+main.landing-page .right h3 {
   font-size: 3.5rem;
   padding: 2rem;
 }
 
-.right button {
+main.landing-page .right button {
   padding: .5rem 10rem;
   font-size: 5rem;
   background: #FFC806;
@@ -238,4 +291,25 @@ main {
   letter-spacing: 2px;
   border-radius: 5rem;
   cursor: pointer;
+}
+
+.menu-main {
+  position: relative;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.7))), url(/assets/images/sushi.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(/assets/images/sushi.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.menu-main .desktop-h1 {
+  text-align: center;
+  font-size: 8rem;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.menu-main section {
+  color: #fff;
 }

@@ -1,10 +1,15 @@
-nav {
+nav.main-nav {
   display: flex;
   flex-wrap: wrap;
   background: $color-black;
   padding: 2rem;
   padding-left: 3rem;
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+
   @include respond("tab-port") {
     justify-content: center;
 
@@ -17,8 +22,13 @@ nav {
     color: $color-white;
     text-decoration: none;
     font-size: 3.8rem;
-  }
 
+  }
+  
+  .active {
+    color: $color-secondary;
+  }
+    
   ul {
     display: flex;
     width: 40%;
@@ -28,5 +38,13 @@ nav {
     @include respond('tab-port') {
       width: 100%;
     }
+  }
+}
+
+.spacer {
+  height: 75px;
+
+  @include respond('tab-port') {
+    height: 112px;
   }
 }

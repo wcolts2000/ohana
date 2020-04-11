@@ -1,4 +1,4 @@
-main {
+main.landing-page {
   display: flex;
   flex-wrap: wrap;
   min-height: 80vh;
@@ -12,7 +12,7 @@ main {
     background-repeat: no-repeat;
     background-position: right;
   }
-}
+
 
 .left {
   background-image:linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.8)), url(/assets/images/fish-sushi.jpg);
@@ -104,4 +104,5 @@ main {
     border-radius: 5rem;
     cursor: pointer;
   }
+}
 }
