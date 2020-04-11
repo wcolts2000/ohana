@@ -179,8 +179,7 @@ main.landing-page {
 
 @media (max-width: 56.25em) {
   main.landing-page {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.8))), url("/fish-sushi.JPG");
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/fish-sushi.JPG");
+    background-image: url(/fish-sushi.JPG);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right;
