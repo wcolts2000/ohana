@@ -131,7 +131,7 @@ nav.main-nav ul {
 }
 
 .spacer {
-  height: 75px;
+  height: 575px;
 }
 
 @media (max-width: 56.25em) {
@@ -156,10 +156,14 @@ footer h3 {
 
 .menu-nav {
   background: #fff;
+  display: block;
   padding: 2rem;
   position: -webkit-sticky;
   position: sticky;
   top: 75px;
+  z-index: 100;
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .menu-nav ul {
@@ -182,10 +186,174 @@ footer h3 {
 .menu-nav ul a {
   color: #000;
   text-decoration: none;
+  -webkit-transition: all .3;
+  transition: all .3;
 }
 
-.menu-nav h1 {
+.menu-nav ul a:hover {
+  color: #930E0C;
+}
+
+@media (max-width: 56.25em) {
+  .menu-nav {
+    display: none;
+  }
+}
+
+#hamburger-backplate {
+  height: 60px;
+  width: 60px;
+  background: white;
+  border-radius: 50%;
+  position: fixed;
+  top: 14.3rem;
+  right: 10.3rem;
+  z-index: 1999;
+  cursor: pointer;
+}
+
+#hamburger {
+  content: "";
+  position: fixed;
+  pointer-events: none;
+  right: 12rem;
+  display: block;
+  width: 30px;
+  top: 15rem;
+  z-index: 2000;
+  -webkit-box-shadow: 1px 10px 1px 1px #000, 1px 16px 1px 1px #000, 1px 22px 1px 1px #000;
+  box-shadow: 0 12px 0 2px #000, 0 33px 0 2px #000, 0 22px 0 2px #000;
+}
+
+#hamburger-backplate, #hamburger {
   display: none;
+}
+
+@media (max-width: 56.25em) {
+  #hamburger-backplate, #hamburger {
+    display: block;
+  }
+}
+
+#hamburger-backplate.open, #hamburger.open {
+  background: transparent;
+  color: transparent;
+  pointer-events: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.menu-nav-mobile {
+  position: absolute;
+}
+
+.menu-nav-mobile span {
+  position: absolute;
+  font-size: 3rem;
+  color: transparent;
+  font-weight: bold;
+  right: 3rem;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border-radius: 50%;
+  border: none;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  pointer-events: none;
+}
+
+.menu-nav-mobile span:hover {
+  background: #930E0C;
+  color: #fff;
+}
+
+.menu-nav-mobile h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #000;
+  display: inline-block;
+  letter-spacing: 2px;
+  color: transparent;
+}
+
+.menu-nav-mobile ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.menu-nav-mobile li {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  padding-right: 5rem;
+  padding-bottom: .5rem;
+  position: relative;
+  letter-spacing: 2px;
+}
+
+.menu-nav-mobile li::after {
+  min-width: 30rem;
+  width: 40%;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.menu-nav-mobile li a {
+  text-decoration: none;
+  color: transparent;
+  font-weight: bold;
+}
+
+.menu-nav-mobile li a:hover {
+  color: #930E0C;
+}
+
+@media (max-width: 56.25em) {
+  .menu-nav-mobile {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 3rem;
+    z-index: 1000;
+    position: fixed;
+    background: #fff;
+    background: transparent;
+  }
+}
+
+.menu-nav-mobile.open {
+  background: #fff;
+}
+
+.menu-nav-mobile.open span {
+  color: #930E0C;
+  border: 2px solid #930E0C;
+  pointer-events: initial;
+}
+
+.menu-nav-mobile.open span:hover {
+  color: #fff;
+}
+
+.menu-nav-mobile.open h1 {
+  color: #000;
+}
+
+.menu-nav-mobile.open li::after {
+  content: "";
+}
+
+.menu-nav-mobile.open li a {
+  color: #000;
 }
 
 main.landing-page {
@@ -202,6 +370,7 @@ main.landing-page {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-top: 70px;
 }
 
 @media (max-width: 56.25em) {
@@ -210,6 +379,7 @@ main.landing-page {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("../assets/images/fish-sushi.JPG");
     background-size: cover;
     background-repeat: no-repeat;
+    padding-top: 130px;
     background-position: right;
   }
 }
@@ -358,6 +528,13 @@ main.landing-page .right button:hover {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+  padding-top: 12rem;
+}
+
+@media (max-width: 56.25em) {
+  .menu-main {
+    padding-top: 15rem;
+  }
 }
 
 .menu-main .desktop-h1 {
@@ -367,8 +544,153 @@ main.landing-page .right button:hover {
   margin-bottom: 2.1rem;
 }
 
+@media (max-width: 56.25em) {
+  .menu-main .desktop-h1 {
+    display: none;
+  }
+}
+
 .menu-main section {
   color: #000;
   background: rgba(255, 255, 255, 0.7);
-  margin: 4%;
+  margin: 4% 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 7px;
+}
+
+@media (max-width: 75em) {
+  .menu-main section {
+    margin: 4%;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .menu-main section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.menu-main section .left-wrapper {
+  position: relative;
+}
+
+.menu-main section .left-wrapper::after {
+  content: "";
+  width: 2px;
+  background: #000;
+  position: absolute;
+  right: 0;
+  top: 20%;
+  bottom: 10%;
+}
+
+@media (max-width: 75em) {
+  .menu-main section .left-wrapper::after {
+    display: none;
+  }
+}
+
+.menu-main section .left-wrapper, .menu-main section .right-wrapper {
+  width: 50%;
+  padding: 2rem 8rem 6rem;
+}
+
+@media (max-width: 56.25em) {
+  .menu-main section .left-wrapper, .menu-main section .right-wrapper {
+    width: 100%;
+  }
+}
+
+.menu-main section .left-wrapper h3, .menu-main section .right-wrapper h3 {
+  text-align: center;
+  margin: 2rem auto;
+  font-size: 4.4rem;
+  position: relative;
+  padding: 1rem;
+  letter-spacing: .2rem;
+}
+
+.menu-main section .left-wrapper h3::after, .menu-main section .right-wrapper h3::after {
+  content: "";
+  width: auto;
+  height: 2px;
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+  right: 46%;
+  left: 46%;
+}
+
+.menu-main section .long-card {
+  font-size: 3.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu-main section .long-card span {
+  border-bottom: 4px dotted #000;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 1rem;
+}
+
+section.raw-cooked-sushi-section .wrapper {
+  padding: 3rem;
+  font-size: 3.4rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+section.raw-cooked-sushi-section .wrapper h3 {
+  text-align: center;
+  margin: 5rem auto;
+  width: 100%;
+}
+
+section.raw-cooked-sushi-section .wrapper .menu-card {
+  background: white;
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 3rem;
+  padding: 2rem;
+}
+
+@media (max-width: 56.25em) {
+  section.raw-cooked-sushi-section .wrapper .menu-card {
+    width: 80%;
+  }
+}
+
+section.raw-cooked-sushi-section .wrapper .menu-card span {
+  color: #930E0C;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+section.raw-cooked-sushi-section .wrapper .menu-card__title {
+  width: 90%;
+}
+
+section.raw-cooked-sushi-section .wrapper .menu-card__long, section.raw-cooked-sushi-section .wrapper .menu-card__hand, section.raw-cooked-sushi-section .wrapper .menu-card__inside, section.raw-cooked-sushi-section .wrapper .menu-card__top {
+  width: 100%;
 }

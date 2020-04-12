@@ -5,11 +5,13 @@ main.landing-page {
   text-align: center;
   color: white;
   justify-content: center;
+  padding-top: 70px;
 
   @include respond("tab-port") {
     background-image:linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.8)), url("../assets/images/fish-sushi.JPG");
     background-size: cover;
     background-repeat: no-repeat;
+    padding-top: 130px;
     background-position: right;
   }
 
