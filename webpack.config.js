@@ -45,10 +45,6 @@ module.exports = {
     ],
   },
   plugins: [
-    new MiniCssExtractPlugin({
-      filename: "[name].css",
-      chunkFilename: "[id].css"
-    }),
     new HtmlWebPackPlugin({
       template: './src/index.html',
       filename: './index.html',
@@ -64,6 +60,10 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: './src/contact.html',
       filename: './contact.html',
+    }),
+    new MiniCssExtractPlugin({
+      filename: "[name].css",
+      chunkFilename: "[id].css"
     }),
     new FaviconsWebpackPlugin('./src/assets/images/logoRed.png'),
   ],

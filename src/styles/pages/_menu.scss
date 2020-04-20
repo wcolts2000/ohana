@@ -47,15 +47,6 @@
       margin: 2rem 1rem;
       display: flex;
       border-radius: 7px;
-      flex-direction: column;
-
-
-      @include respond("tab-land") {
-        margin: 4%;
-      }
-
-      @include respond("tab-port") {
-      }
 
       h3 {
         text-align: center;
