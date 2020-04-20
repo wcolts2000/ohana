@@ -4,6 +4,10 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 // const path = require('path');
 
 module.exports = {
+  // mode: 'development',
+  // devtool: 'source-map',
+  // context: path.resolve(__dirname, 'src'),
+  // entry: './styles/styles.scss',
   module: {
     rules: [
       {
@@ -23,10 +27,12 @@ module.exports = {
         ],
       },
       {
-        test: /\.scss$/,
+        test: /\.scss|css$/,
+        exclude: /node_modules/,
         use: [
           "style-loader",
           "css-loader",
+          "postcss-loader",
           "sass-loader"
         ]
       },
@@ -39,6 +45,10 @@ module.exports = {
     ],
   },
   plugins: [
+    new MiniCssExtractPlugin({
+      filename: "[name].css",
+      chunkFilename: "[id].css"
+    }),
     new HtmlWebPackPlugin({
       template: './src/index.html',
       filename: './index.html',
@@ -54,10 +64,6 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: './src/contact.html',
       filename: './contact.html',
-    }),
-    new MiniCssExtractPlugin({
-      filename: "[name].css",
-      chunkFilename: "[id].css"
     }),
     new FaviconsWebpackPlugin('./src/assets/images/logoRed.png'),
   ],
