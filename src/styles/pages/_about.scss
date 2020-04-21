@@ -1,0 +1,28 @@
+.about-main {
+  padding: 110px 2rem 2rem;
+  max-width: 1800px;
+  margin: 0 auto;
+  width: 100%;
+  background: lighten($color-black, 90);
+}
+
+h1 {
+  font-size: 7rem;
+  text-align: center;
+  margin: 2rem;
+}
+
+.gallery {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    align-items: stretch;
+
+  img {
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+    max-width: 100%;
+  }
+}

@@ -1,6 +1,6 @@
 # Ohana Sushi
 
-Ohana Sushi Reno Nevada Sushi Bar
+Ohana Sushi Sparks Nevada Sushi Bar
 
 [OhanaSushiRenoSparks.com](https://www.ohanasushirenosparks.com)
 
