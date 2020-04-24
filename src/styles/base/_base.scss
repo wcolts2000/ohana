@@ -35,6 +35,7 @@ body {
   font-family: 'Julee', cursive;
   font-size: $default-font-size;
   background: lighten($color-secondary, 35);
+  position: relative;
 
   @include respond(tab-port) {
     padding: 0;

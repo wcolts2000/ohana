@@ -13,8 +13,8 @@ nav.main-nav {
     max-width: 1800px;
     margin: 0 auto;
     padding-left: 3rem;
-    
-    @include respond("tab-port") {
+
+    @include respond('tab-port') {
       justify-content: center;
 
       a {
@@ -23,22 +23,22 @@ nav.main-nav {
     }
   }
 
-
-  a, ul li a {
+  a,
+  ul li a {
     color: $color-white;
     text-decoration: none;
     font-size: 3.8rem;
-    transition: all .5;
+    transition: all 0.5;
 
     &:hover {
       color: $color-secondary;
     }
   }
-  
+
   .active {
     color: $color-secondary;
   }
-    
+
   ul {
     display: flex;
     width: 40%;
