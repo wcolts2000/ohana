@@ -48,51 +48,72 @@ window.addEventListener('DOMContentLoaded', () => {
         }
       });
     });
-  }
 
-  // Beverage Menu Content
+    // Beverage Menu Content
 
-  const beverageSectionWrapper = document.querySelector('#beverages .wrapper');
-  const beveragesHeaders = Object.keys(BeverageMenu.Beverages);
-  const beverageSections = [];
+    const beverageSectionWrapper = document.querySelector(
+      '#beverages .wrapper'
+    );
+    const beveragesHeaders = Object.keys(BeverageMenu.Beverages);
+    const beverageSections = [];
 
-  for (let header of beveragesHeaders) {
-    const className = header.toLowerCase().split(' ').join('-');
-    const sectionObj = new Section(`${header}`);
-    beverageSectionWrapper.appendChild(sectionObj.createSection());
-    beverageSections.push({
-      wrapper: document.querySelector(`.${className}-section .wrapper`),
-      header,
+    for (let header of beveragesHeaders) {
+      const className = header.toLowerCase().split(' ').join('-');
+      const sectionObj = new Section(`${header}`);
+      beverageSectionWrapper.appendChild(sectionObj.createSection());
+      beverageSections.push({
+        wrapper: document.querySelector(`.${className}-section .wrapper`),
+        header,
+      });
+    }
+
+    beverageSections.forEach((section) => {
+      section.wrapper.classList.add('beverages-section');
+      BeverageMenu.Beverages[section.header].forEach((item) => {
+        const menuItem = new Card(item);
+        const el = menuItem.createLongCard();
+        el.classList.add('drink');
+        section.wrapper.appendChild(el);
+      });
     });
-  }
 
-  beverageSections.forEach((section) => {
-    section.wrapper.classList.add('beverages-section');
-    BeverageMenu.Beverages[section.header].forEach((item) => {
-      const menuItem = new Card(item);
-      const el = menuItem.createLongCard();
-      el.classList.add('drink');
-      section.wrapper.appendChild(el);
+    // MENU NAV ======================
+
+    const menuNav = document.querySelectorAll('#menu-nav a');
+
+    menuNav.forEach((navLink) => {
+      navLink.addEventListener('click', scrollToPosition);
     });
-  });
 
-  // MENU NAV ======================
+    function scrollToPosition(e) {
+      e.preventDefault();
+      const idTag = e.target.href.split('#')[1];
+      const desiredLocation = document.getElementById(
+        idTag.replace(/%20/gi, ' ')
+      ).offsetTop;
+      console.dir(desiredLocation);
+      window.scrollTo(0, desiredLocation - 150);
+    }
 
-  const menuNav = document.querySelectorAll('#menu-nav a');
+    // TEMP MENU MODAL OPEN ============
+    const tempMenu = document.getElementById('modal');
+    const modalClose = document.getElementById('modal__close');
 
-  menuNav.forEach((navLink) => {
-    navLink.addEventListener('click', scrollToPosition);
-  });
+    setTimeout(() => {
+      openModal();
+    }, 3000);
 
-  function scrollToPosition(e) {
-    e.preventDefault();
-    const idTag = e.target.href.split('#')[1];
-    const desiredLocation = document.getElementById(idTag.replace(/%20/gi, ' '))
-      .offsetTop;
-    console.dir(desiredLocation);
-    window.scrollTo(0, desiredLocation - 150);
+    function openModal() {
+      tempMenu.classList.add('modal-open');
+      modalClose.addEventListener('click', closeModal);
+    }
+
+    function closeModal() {
+      tempMenu.classList.remove('modal-open');
+    }
+
+    // =================================
+    // ==  MENU END
+    // =================================
   }
-  // =================================
-  // ==  MENU END
-  // =================================
 }); // DOMContentLoaded

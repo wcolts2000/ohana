@@ -219,3 +219,66 @@ hr {
     }
   }
 }
+
+#modal {
+  position: fixed;
+  z-index: 0;
+  flex-direction: column;
+  color: transparent;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 5rem;
+  height: 0;
+  pointer-events: none;
+
+  span {
+    position: absolute;
+    cursor: pointer;
+    font-size: 2rem;
+    top: 2rem;
+    right: 2rem;
+    color: transparent;
+    background: transparent;
+    padding: 1rem 1.5rem;
+    border-radius: 50%;
+    height: 0;
+  }
+
+  h2 {
+    margin-bottom: 2rem;
+    height: 0;
+  }
+
+  img {
+    width: 100%;
+    max-width: 1000px;
+    height: 0;
+  }
+}
+
+#modal.modal-open {
+  z-index: 1000;
+  color: $color-white;
+  height: auto;
+  pointer-events: initial;
+
+  span {
+    color: red;
+    background: white;
+    height: auto;
+  }
+
+  h2 {
+    height: auto;
+  }
+
+  img {
+    height: auto;
+  }
+}
