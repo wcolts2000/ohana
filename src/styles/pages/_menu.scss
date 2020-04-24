@@ -1,15 +1,16 @@
 .menu-main {
   flex: 1 0 auto;
   position: relative;
-  background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.7)), url("../assets/images/sushi.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+    url('../assets/images/sushi.jpg');
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 12rem;
+  padding-top: 20rem;
 
-  @include respond("tab-port") {
-    padding-top: 15rem;
+  @include respond('tab-port') {
+    padding-top: 25rem;
   }
 
   .main-wrapper {
@@ -25,12 +26,11 @@
     text-align: center;
     margin: 2rem auto;
 
-    @include respond("tab-port") {
+    @include respond('tab-port') {
       width: 50%;
     }
-
   }
-  
+
   .wrapper {
     padding: 3rem;
     font-size: 3.4rem;
@@ -41,63 +41,62 @@
   }
 
   // #menu-content {
-    .menu-section .wrapper {
-      color: $color-black;
-      background: rgba($color-white, .7);
-      margin: 2rem 1rem;
-      display: flex;
-      border-radius: 7px;
+  .menu-section .wrapper {
+    color: $color-black;
+    background: rgba($color-white, 0.7);
+    // margin: 2rem 1rem;
+    display: flex;
+    border-radius: 7px;
 
-      h3 {
-        text-align: center;
-        margin: 2rem auto;
-        font-size: 4.4rem;
-        position: relative;
-        padding: 1rem;
-        letter-spacing: .2rem;
+    h3 {
+      text-align: center;
+      margin: 2rem auto;
+      font-size: 4.4rem;
+      position: relative;
+      padding: 1rem;
+      letter-spacing: 0.2rem;
 
-        &::after {
-          content: "";
-          width: auto;
-          height: 2px;
-          background-color: $color-black;
-          position: absolute;
-          bottom: 0;
-          right: 46%;
-          left: 46%;
-        }
-      }
-
-      .long-card {
-        font-size: 3.4rem;
-        display: flex;
-        justify-content: space-between;
-        padding-bottom: 1.5rem;
-        width: 100%;
-  
-        span {
-          border-bottom: 4px dotted $color-black;
-          flex: 1;
-          margin: 1rem;
-        }
+      &::after {
+        content: '';
+        width: auto;
+        height: 2px;
+        background-color: $color-black;
+        position: absolute;
+        bottom: 0;
+        right: 46%;
+        left: 46%;
       }
     }
+
+    .long-card {
+      font-size: 3.4rem;
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 1.5rem;
+      width: 100%;
+
+      span {
+        border-bottom: 4px dotted $color-black;
+        flex: 1;
+        margin: 1rem;
+      }
+    }
+  }
   // }
-  
+
   .desktop-h1 {
     text-align: center;
     font-size: 8rem;
     color: $color-white;
     margin-bottom: 2.1rem;
 
-    @include respond("tab-port") {
-      display: none;
-    } 
-  }   
+    @include respond('tab-port') {
+      // display: none;
+    }
+  }
 }
 
-.menu-section
- {
+.menu-section {
   .wrapper {
     padding: 3rem;
     font-size: 3.4rem;
@@ -105,75 +104,77 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    
+
     h3 {
       text-align: center;
       margin: 5rem auto;
       width: 100%;
     }
-}
-
-.menu-card {
-  background: white;
-  width: 90%;
-  margin-bottom: 3rem;
-  padding: 2rem;
-  border-radius: 7px;
-  font-size: 3.4rem;
-  box-shadow: 2px 2px 9px rgba(0,0,0,.3);
-  align-self: center;
-
-  @include respond('tab-port') {
-    width: 100%;
   }
 
-  &__header {
-    display: flex;
-    flex-wrap: wrap;
-    background: $color-primary;
-    padding: 1rem .75rem;
-    color: $color-white;
-    margin-bottom: 1rem;
+  .menu-card {
+    background: white;
+    width: 90%;
+    margin-bottom: 3rem;
+    padding: 2rem;
     border-radius: 7px;
+    font-size: 3.4rem;
+    box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.3);
+    align-self: center;
 
-    @include respond('phone') {
-      flex-direction: column;
+    @include respond('tab-port') {
+      width: 100%;
+    }
+
+    &__header {
+      display: flex;
+      flex-wrap: wrap;
+      background: $color-primary;
+      padding: 1rem 0.75rem;
+      color: $color-white;
+      margin-bottom: 1rem;
+      border-radius: 7px;
+
+      @include respond('phone') {
+        flex-direction: column;
+      }
+    }
+
+    &__long {
+      padding-right: 1rem;
+    }
+
+    &__long,
+    &__hand,
+    &__price {
+      @include respond('phone') {
+        align-self: flex-end;
+      }
+    }
+
+    &__ingredients p {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+      padding-left: 1.5rem;
+    }
+
+    span {
+      border-bottom: 4px dotted $color-white;
+      flex: 1;
+      margin: 1rem;
+
+      @include respond('phone') {
+        display: none;
+      }
+    }
+
+    p span {
+      color: $color-white;
+      font-weight: bold;
+      border-bottom: none;
+      display: inline;
     }
   }
-
-  &__long {
-    padding-right: 1rem;
-  }
-
-  &__long, &__hand, &__price {
-    @include respond('phone') {
-      align-self: flex-end;
-    }
-  }
-
-  &__ingredients p {
-    font-size: 2.8rem;
-    margin-bottom: .5rem;
-    padding-left: 1.5rem;
-  }
-
-  span {
-    border-bottom: 4px dotted $color-white;
-    flex: 1;
-    margin: 1rem;
-    
-    @include respond('phone') {
-      display: none;
-    }
-  }
-
-  p span {
-    color: $color-white;
-    font-weight: bold;
-    border-bottom: none;
-    display: inline;        
-  }
- }
 }
 
 #poke {
@@ -202,7 +203,7 @@ hr {
 #beverages.menu-section {
   .beverages-section {
     flex-direction: row;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
   }
 
   .drink {
