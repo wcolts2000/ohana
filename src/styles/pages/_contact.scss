@@ -1,12 +1,9 @@
 main.contact-main {
-  min-width: 1800px;
+  max-width: 1800px;
   margin: 0 auto;
-  display: flex;
   padding: 103px 3rem 1rem;
-  justify-content: space-around;
   align-items: center;
   text-align: center;
-  background: lighten($color-secondary, 35);
 
   h1 {
     font-size: 5rem;
@@ -23,8 +20,14 @@ main.contact-main {
     font-size: 4rem;
   }
 
-  img, iframe {
+  img,
+  iframe {
+    width: 100%;
+  }
+
+  img {
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
     border-radius: 7px;
-    box-shadow: 2px 2px 15px rgba(0,0,0,.2);
+    max-width: 600px;
   }
 }

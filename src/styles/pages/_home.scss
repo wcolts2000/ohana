@@ -6,125 +6,118 @@ main.landing-page {
   color: white;
   justify-content: center;
   padding-top: 70px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+    url('../assets/images/ohana-interior.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 
-  @include respond("tab-port") {
-    background-image:linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.8)), url("../assets/images/fish-sushi.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+  @include respond('tab-port') {
     padding-top: 130px;
     background-position: right;
   }
 
+  .left {
+    width: 50%;
 
-.left {
-  background-image:linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.8)), url("../assets/images/fish-sushi.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 50%;
-
-  @include respond("tab-port") {
-    width: 100%;
-    background-image: none;
-    height: min-content;
-  }
-
-  img {
-    width: 40%;
-    margin: 6rem auto 3rem;
-
-    @include respond("tab-port") {
-      width: 30%;
-      height: 30%;
-      margin: 2rem auto;
+    @include respond('tab-port') {
+      width: 100%;
+      background-image: none;
+      height: min-content;
     }
-  };
 
-  h2 {
-    font-size: 4rem;
-  }
+    img {
+      width: 40%;
+      margin: 6rem auto 3rem;
 
-  a, address {
-    font-size: 3.5rem;
-    padding: 1rem;
-
-    @include respond("tab-port") {
-      display: none;
+      @include respond('tab-port') {
+        width: 30%;
+        height: 30%;
+        margin: 2rem auto;
+      }
     }
-  }
 
-  a {
-    text-decoration: none;
-    color: white;
-  }
-}
+    h2 {
+      font-size: 4rem;
+    }
 
-.right {
-  background-image:linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.8)), url("../assets/images/japan.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: right;
-  width: 50%;
+    a,
+    address {
+      font-size: 3.5rem;
+      padding: 1rem;
 
-  @include respond("tab-port") {
-    width: 100%;
-    background-image: none;
-  }
+      @include respond('tab-port') {
+        display: none;
+      }
+    }
 
-  h1 {
-    font-size: 6rem;
-    margin-top: 6rem;
-
-    @include respond("tab-port") {
-      color: transparent;
-      position: absolute;
-      pointer-events: none;
+    a {
+      text-decoration: none;
+      color: white;
     }
   }
 
-  .box {
-    margin: 4rem auto 8rem;
-    width: max-content;
-    padding: 2rem 4rem;
-    outline: 2rem solid rgba($color-primary, .5);
-    background: rgba(0,0,0,.7);
-  }
+  .right {
+    width: 50%;
 
-  h2 {
-    font-size: 2.8rem;
-    letter-spacing: 2px;
-    
-    @include respond("tab-port") {
-      font-size: 3.2rem;
-    }
-  }
-
-  h3 {
-    letter-spacing: 2.5px;
-    font-size: 2.5rem;
-    padding: 2rem;
-
-    @include respond("tab-port") {
-      font-size: 3.8rem;
-    }
-  }
-
-  button {
-    padding: .5rem 10rem;
-    font-size: 5rem;
-    background: $color-secondary;
-    color: $color-black;
-    font-family: 'Julee', cursive;
-    letter-spacing: 2px;
-    border-radius: 5rem;
-    cursor: pointer;
-
-    &:hover {
-      background: darken($color-secondary, 5);
+    @include respond('tab-port') {
+      width: 100%;
     }
 
-    @include respond("tab-port") {
-      margin-bottom: 5rem;
+    h1 {
+      font-size: 6rem;
+      margin-top: 6rem;
+
+      @include respond('tab-port') {
+        color: transparent;
+        position: absolute;
+        pointer-events: none;
+      }
+    }
+
+    .box {
+      margin: 4rem auto 8rem;
+      width: max-content;
+      padding: 2rem 4rem;
+      outline: 2rem solid rgba($color-primary, 0.5);
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    h2 {
+      font-size: 2.8rem;
+      letter-spacing: 2px;
+
+      @include respond('tab-port') {
+        font-size: 3.2rem;
+      }
+    }
+
+    h3 {
+      letter-spacing: 2.5px;
+      font-size: 2.5rem;
+      padding: 2rem;
+
+      @include respond('tab-port') {
+        font-size: 3.8rem;
+      }
+    }
+
+    button {
+      padding: 0.5rem 10rem;
+      font-size: 5rem;
+      background: $color-secondary;
+      color: $color-black;
+      font-family: 'Julee', cursive;
+      letter-spacing: 2px;
+      border-radius: 5rem;
+      cursor: pointer;
+
+      &:hover {
+        background: darken($color-secondary, 5);
+      }
+
+      @include respond('tab-port') {
+        margin-bottom: 5rem;
+      }
     }
   }
-}
 }
