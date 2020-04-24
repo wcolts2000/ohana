@@ -2,6 +2,7 @@ import { Menu, BeverageMenu } from './js/menu';
 import Card from './js/MenuCard';
 import Section from './js/Section';
 import './styles/styles.scss';
+import tempMenu from './assets/pdfs/Ohana_Specials.pdf';
 
 window.addEventListener('DOMContentLoaded', () => {
   // =================================
@@ -91,12 +92,11 @@ window.addEventListener('DOMContentLoaded', () => {
       const desiredLocation = document.getElementById(
         idTag.replace(/%20/gi, ' ')
       ).offsetTop;
-      console.dir(desiredLocation);
       window.scrollTo(0, desiredLocation - 150);
     }
 
     // TEMP MENU MODAL OPEN ============
-    const tempMenu = document.getElementById('modal');
+    const tempMenuDiv = document.getElementById('modal');
     const modalClose = document.getElementById('modal__close');
 
     setTimeout(() => {
@@ -104,13 +104,17 @@ window.addEventListener('DOMContentLoaded', () => {
     }, 3000);
 
     function openModal() {
-      tempMenu.classList.add('modal-open');
+      tempMenuDiv.classList.add('modal-open');
       modalClose.addEventListener('click', closeModal);
     }
 
     function closeModal() {
-      tempMenu.classList.remove('modal-open');
+      tempMenuDiv.classList.remove('modal-open');
     }
+
+    const menuDownload = document.getElementById('menu-download');
+    menuDownload['download'] = 'Ohana_Menu';
+    menuDownload['href'] = `${tempMenu}`;
 
     // =================================
     // ==  MENU END
