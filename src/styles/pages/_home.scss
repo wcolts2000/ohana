@@ -129,12 +129,31 @@ main.landing-page {
 }
 
 // temp styles
-.disclaimer {
-  font-size: 2.4rem;
-  padding: 2rem 5%;
-  text-align: center;
+.left h2 {
+  @include respond('tab-port') {
+    margin-bottom: 2rem;
+  }
 }
 
+.disclaimer {
+  font-size: 3rem;
+  padding: 2rem 5%;
+  text-align: center;
+  background: $color-black;
+  color: $color-white;
+}
+
+#takeout-banner {
+  @include respond('tab-port') {
+    display: none;
+  }
+}
+
+#delivery-banner {
+  width: 70%;
+  border-radius: 7px;
+  margin: 2rem;
+}
 
 #menu {
   .section-wrapper {
