@@ -1,6 +1,16 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const SitemapPlugin = require('sitemap-webpack-plugin').default;
+ 
+// Example of simple string paths
+const paths = [
+  '/',
+  'menu.html',
+  'contact.html',
+  'about.html'
+];
+ 
 // const path = require('path');
 
 module.exports = {
@@ -34,7 +44,7 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
       },
       {
-        test: /\.(png|svg|jpg|gif|pdf)$/,
+        test: /\.(png|svg|jpg|gif|pdf|xml)$/,
         use: ['file-loader'],
       },
     ],
@@ -44,22 +54,23 @@ module.exports = {
       template: './src/index.html',
       filename: './index.html',
     }),
-    new HtmlWebPackPlugin({
-      template: './src/menu.html',
-      filename: './menu.html',
-    }),
-    new HtmlWebPackPlugin({
-      template: './src/about.html',
-      filename: './about.html',
-    }),
-    new HtmlWebPackPlugin({
-      template: './src/contact.html',
-      filename: './contact.html',
-    }),
+    // new HtmlWebPackPlugin({
+    //   template: './src/menu.html',
+    //   filename: './menu.html',
+    // }),
+    // new HtmlWebPackPlugin({
+    //   template: './src/about.html',
+    //   filename: './about.html',
+    // }),
+    // new HtmlWebPackPlugin({
+    //   template: './src/contact.html',
+    //   filename: './contact.html',
+    // }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css',
     }),
     new FaviconsWebpackPlugin('./src/assets/images/logoRed.png'),
+    new SitemapPlugin('https://ohanasushirenosparks.com', paths)
   ],
 };

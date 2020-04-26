@@ -5,6 +5,32 @@ import './styles/styles.scss';
 import tempMenu from './assets/pdfs/Ohana_Specials.pdf';
 
 window.addEventListener('DOMContentLoaded', () => {
+// GLOBAL FUNCTIONS ====================
+
+function scrollToPosition(e) {
+  e.preventDefault();
+  const idTag = e.target.href.split('#')[1];
+
+  const desiredLocation = document.getElementById(
+    idTag.replace(/%20/gi, ' ')
+  ).offsetTop;
+  window.scrollTo(0, desiredLocation - 100);
+}
+
+
+// TEMP MENU METHODS =============================
+
+const navLinks = document.querySelectorAll('.main-nav div ul li a');
+navLinks.forEach(link => link.addEventListener('click', scrollToPosition))
+
+// TODO: uncomment this in menu page code after removing from here
+const menuDownload = document.getElementById('menu-download');
+menuDownload['download'] = 'Ohana_Menu';
+menuDownload['href'] = `${tempMenu}`;
+const menuBtn = document.getElementById('menu-btn');
+console.log(menuBtn)
+menuBtn.addEventListener('click', scrollToPosition)
+
   // =================================
   // ==  MENU START
   // =================================
@@ -86,15 +112,6 @@ window.addEventListener('DOMContentLoaded', () => {
       navLink.addEventListener('click', scrollToPosition);
     });
 
-    function scrollToPosition(e) {
-      e.preventDefault();
-      const idTag = e.target.href.split('#')[1];
-      const desiredLocation = document.getElementById(
-        idTag.replace(/%20/gi, ' ')
-      ).offsetTop;
-      window.scrollTo(0, desiredLocation - 150);
-    }
-
     // TEMP MENU MODAL OPEN ============
     const tempMenuDiv = document.getElementById('modal');
     const modalClose = document.getElementById('modal__close');
@@ -112,9 +129,9 @@ window.addEventListener('DOMContentLoaded', () => {
       tempMenuDiv.classList.remove('modal-open');
     }
 
-    const menuDownload = document.getElementById('menu-download');
-    menuDownload['download'] = 'Ohana_Menu';
-    menuDownload['href'] = `${tempMenu}`;
+    // const menuDownload = document.getElementById('menu-download');
+    // menuDownload['download'] = 'Ohana_Menu';
+    // menuDownload['href'] = `${tempMenu}`;
 
     // =================================
     // ==  MENU END
