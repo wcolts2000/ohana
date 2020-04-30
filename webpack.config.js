@@ -54,18 +54,18 @@ module.exports = {
       template: './src/index.html',
       filename: './index.html',
     }),
-    // new HtmlWebPackPlugin({
-    //   template: './src/menu.html',
-    //   filename: './menu.html',
-    // }),
-    // new HtmlWebPackPlugin({
-    //   template: './src/about.html',
-    //   filename: './about.html',
-    // }),
-    // new HtmlWebPackPlugin({
-    //   template: './src/contact.html',
-    //   filename: './contact.html',
-    // }),
+    new HtmlWebPackPlugin({
+      template: './src/menu.html',
+      filename: './menu.html',
+    }),
+    new HtmlWebPackPlugin({
+      template: './src/about.html',
+      filename: './about.html',
+    }),
+    new HtmlWebPackPlugin({
+      template: './src/contact.html',
+      filename: './contact.html',
+    }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css',
