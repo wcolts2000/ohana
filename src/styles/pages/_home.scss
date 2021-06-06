@@ -160,6 +160,8 @@ main.landing-page {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin: auto;
+    max-width: 1020px;
 
     img {
       margin: 2rem;
@@ -169,7 +171,6 @@ main.landing-page {
 
     img:first-of-type {
       max-width: 900px;
-      width: 60%;
 
       @include respond('tab-port') {
         width: 90%;
